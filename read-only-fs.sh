@@ -183,7 +183,7 @@ echo "Removing unwanted packages..."
 # Let's keep dbus...that includes avahi-daemon, a la 'raspberrypi.local',
 # also keeping xserver & lightdm for GUI login (WIP, not working yet).
 apt-get remove -y --force-yes --purge triggerhappy logrotate \
- dphys-swapfile
+ dphys-swapfile xserver-common lightdm avahi-daemon dbus
 apt-get -y --force-yes autoremove --purge
 
 # Replace log management with busybox (use logread if needed)
